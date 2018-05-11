@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home Page</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Home Page</h2>
+  <p>
+This is a cross platform app made to deal with users and their devices.
+  </p>
+
+  <div padding>
+      <button *ngIf='!USER.isLoggedIn()' block (click)='goto("login")'>LogIn</button><br><br><br>
+      <button *ngIf='!USER.isLoggedIn()' block (click)='goto("signup")'>Sign UP</button>
+      <button *ngIf='USER.isLoggedIn()' block (click)='goto("addDev")'>Add Device</button><br><br><br>
+      <button *ngIf='USER.isLoggedIn()' block (click)='goto("updatePassword")'>Update Password</button><br><br><br>
+      <button *ngIf='USER.isLoggedIn()'block (click)='logout("login")'>Logout</button>
+    </div>
+</ion-content>
