@@ -1,0 +1,6 @@
+<h1>HOME PAGE</h1>
+<p>This is the Default page to be shown.</p><br><br>
+<button *ngIf='!USER.isLoggedIn()' class='btn-primary'(click)='goto("login")'>Login</button>
+<button *ngIf='!USER.isLoggedIn()'class='btn-primary'(click)='goto("register")'>Sign Up</button> 
+<button *ngIf='USER.isLoggedIn()' class='btn-primary'(click)='logout("login")'>Logout</button><hr>
+<router-outlet></router-outlet>

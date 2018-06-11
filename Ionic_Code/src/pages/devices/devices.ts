@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {DeviceProvider} from '../../providers/device/device'
 
 /**
  * Generated class for the DevicesPage page.
@@ -15,11 +16,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DevicesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private DEVICE: DeviceProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DevicesPage');
+    let ID = localStorage.getItem('user');
+    if(this.DEVICE.getDevices(ID)){
+      console.log('Received Devices');
+    }
+    else{
+      console.log("Error recceiving Devices");
+    }
   }
 
 }

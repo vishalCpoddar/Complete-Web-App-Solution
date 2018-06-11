@@ -1,0 +1,12 @@
+<div class='padding'>
+    <input type="text" name=devname placeholder="Device name" [(ngModel)]='devname'><br><br>
+<p>Put "," between multiple fields and controls.</p>
+<input type="text" name="devfield" placeholder="fields" [(ngModel)]='devfeild'><br><br>
+<input type="text" name="devcontrol" placeholder="controls" [(ngModel)]='devcontrol'><br><br>
+<button class="btn-warning btn"  (click)="AddDevice()">Add Device</button><br><br>
+<p>{{response}}</p>
+</div>
+
+<div class='padding'>
+  <button class="btn-primary btn" (click)='goto("dashboard")'>Dashboard</button>
+</div>

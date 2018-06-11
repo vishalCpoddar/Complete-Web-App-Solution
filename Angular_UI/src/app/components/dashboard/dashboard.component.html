@@ -1,0 +1,24 @@
+<div class='container'>
+<h1>Dashboard</h1><br><br>
+<button class="btn-warning btn" (click)='goto("addDev")'>Add Device</button><br><br>
+<button class="btn-warning btn" (click)='goto("delDev")'>Delete Device</button><br><br>
+<button class="btn-warning btn" (click)='goto("upPasswd")'>Update Password</button><br><br>
+<button class="btn-warning btn" (click)='goto("RMuser")'>Remove User</button><br><br>
+</div>
+
+<table class='table'>
+  <thead>
+  <tr>
+    <th>Device Name</th>
+    <th>Fields</th>
+    <th>Controls</th>
+  </tr>
+</thead>
+<tbody *ngFor='let device of devices'>
+  <tr>
+    <td>{{device.name}}</td>
+    <td>{{device.fields}}</td>
+    <td>{{device.controls}}</td>
+  </tr>
+</tbody>
+</table>
